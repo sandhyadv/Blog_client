@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
 
-    const {axios, setToken} = useAppContext();
+    const {axios, setToken, navigate} = useAppContext();
 
     const [email, setEmail] =useState('')
     const [password, setPassword] = useState('')
@@ -26,13 +26,48 @@ const Login = () => {
         }
     }
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 flex items-center justify-center p-6'>
-        {/* Background decorative elements */}
-        <div className='absolute inset-0 overflow-hidden'>
-          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-2xl'></div>
-          <div className='absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl'></div>
-          <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-blue-100/20 to-purple-100/20 rounded-full blur-3xl'></div>
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30'>
+        {/* Navigation Header */}
+        <div className='relative z-20 flex justify-between items-center p-6'>
+          {/* Back Button */}
+          <button 
+            onClick={() => navigate('/')}
+            className='flex items-center gap-2 text-slate-600 hover:text-slate-800 transition-colors duration-200 group'
+          >
+            <div className='p-2 rounded-lg bg-white/80 hover:bg-white transition-all duration-200 shadow-sm group-hover:shadow-md'>
+              <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
+              </svg>
+            </div>
+            <span className='text-sm font-medium'>Back to Blog</span>
+          </button>
+          
+          {/* Logo */}
+          <div 
+            onClick={() => navigate('/')} 
+            className='cursor-pointer transition-transform duration-300 hover:scale-105 group'
+          >
+            <div className='flex items-center gap-3'>
+              <div className='relative'>
+                <div className='w-8 h-8 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden'>
+                  <div className='text-white font-bold text-sm relative z-10'>Q</div>
+                  <div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent'></div>
+                </div>
+              </div>
+              <h1 className='title-font text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-pink-700 transition-all duration-300'>
+                QuickBlog
+              </h1>
+            </div>
+          </div>
         </div>
+
+        <div className='flex items-center justify-center p-6 -mt-16'>
+          {/* Background decorative elements */}
+          <div className='absolute inset-0 overflow-hidden'>
+            <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-2xl'></div>
+            <div className='absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl'></div>
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-blue-100/20 to-purple-100/20 rounded-full blur-3xl'></div>
+          </div>
 
         <div className='hydrangea-card w-full max-w-md p-8 relative z-10'>
             {/* Header with icon */}
@@ -103,6 +138,7 @@ const Login = () => {
                     🔒 Secure admin access • Protected by enterprise-grade security
                 </p>
             </div>
+        </div>
         </div>
     </div>
   )
