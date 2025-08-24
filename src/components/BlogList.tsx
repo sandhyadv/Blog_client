@@ -19,9 +19,9 @@ const BlogList = () => {
 };
 
   return (
-    <div className='py-16 px-8 sm:px-16 xl:px-24'>
+    <div className='py-4 px-8 sm:px-16 xl:px-24'>
       {/* Section Title */}
-      <div className='text-center mb-16'>
+      <div className='text-center mb-4'>
         <h2 className='title-font text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 bg-clip-text text-transparent'>
           Discover Stories
         </h2>

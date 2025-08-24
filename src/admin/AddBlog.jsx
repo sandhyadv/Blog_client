@@ -127,8 +127,8 @@ const AddBlog = () => {
                   </div>
                 )}
               </div>
-              <input onChange={(e) => setImage(e.target.files[0])} type='file' id='image' hidden required />
-            </label>
+          <input onChange={(e) => setImage(e.target.files[0])} type='file' id='image' hidden required />
+        </label>
           </div>
 
           {/* Compact Title and Subtitle */}
@@ -175,7 +175,7 @@ const AddBlog = () => {
                 <div ref={editorRef} className='prose prose-sm max-w-none'></div>
               </div>
               
-              {isLoading && (
+          {isLoading && (
                 <div className='absolute inset-0 bg-white/95 backdrop-blur-sm flex items-center justify-center'>
                   <div className='flex flex-col items-center gap-3'>
                     <div className='relative'>
@@ -210,7 +210,7 @@ const AddBlog = () => {
                 </div>
               </div>
             </div>
-          </div>
+        </div>
 
           {/* Compact Category and Settings */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
@@ -222,11 +222,11 @@ const AddBlog = () => {
                 className='w-full px-3 py-2 bg-white/80 border border-blue-200/50 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-300 focus:border-transparent transition-all duration-300'
               >
                 <option value="">Select a category</option>
-                {blogCategories.map((item, index) => {
-                  return <option key={index} value={item}>{item}</option>
-                })}
-              </select>
-            </div>
+          {blogCategories.map((item, index) => {
+            return <option key={index} value={item}>{item}</option>
+          })}
+        </select>
+        </div>
 
             <div className='space-y-2'>
               <label className='text-sm font-semibold text-slate-700'>Publishing Options</label>
@@ -245,7 +245,7 @@ const AddBlog = () => {
                 </div>
               </div>
             </div>
-          </div>
+      </div>
 
           {/* Compact Submit Button */}
           <div className='flex justify-end pt-4'>
@@ -270,7 +270,7 @@ const AddBlog = () => {
             </button>
           </div>
         </div>
-      </form>
+    </form>
     </div>
   )
 }

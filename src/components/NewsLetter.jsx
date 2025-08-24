@@ -3,7 +3,7 @@ import React from 'react'
 const NewsLetter = () => {
   return (
     <div className='mx-8 sm:mx-16 xl:mx-24 my-24'>
-      <div className='hydrangea-bg-pattern rounded-3xl p-16 text-center relative overflow-hidden'>
+      <div className='hydrangea-bg-pattern rounded-3xl p-8 text-center relative overflow-hidden'>
         {/* Background decorative elements */}
         <div className='absolute top-0 left-0 w-full h-full'>
           <div className='absolute top-8 left-8 w-20 h-20 bg-gradient-to-br from-white/40 to-blue-200/40 rounded-full blur-xl'></div>
@@ -19,11 +19,11 @@ const NewsLetter = () => {
             </svg>
           </div>
 
-          <h2 className='title-font text-3xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 bg-clip-text text-transparent'>
+          <h2 className='title-font text-3xl font-bold mb-4 bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 bg-clip-text text-transparent'>
             Never Miss a Story
           </h2>
           
-          <p className='text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto'>
+          <p className='text-md text-slate-600 mb-4 leading-relaxed max-w-2xl mx-auto'>
             Join our community of readers and get the latest articles, insights, and creative content delivered directly to your inbox
           </p>
 
@@ -32,7 +32,7 @@ const NewsLetter = () => {
               <input 
                 type="email" 
                 placeholder='Enter your email address...' 
-                className='w-full px-6 py-4 glass-effect border-2 border-white/30 rounded-2xl focus:outline-none focus:border-blue-300 transition-all duration-300 text-slate-700 placeholder-slate-500'
+                className='w-full px-6 py-3 glass-effect border-2 border-white/30 rounded-2xl focus:outline-none focus:border-blue-300 transition-all duration-300 text-slate-700 placeholder-slate-500'
                 required
               />
               <div className='absolute right-4 top-1/2 transform -translate-y-1/2'>
@@ -44,13 +44,13 @@ const NewsLetter = () => {
             
             <button 
               type="submit" 
-              className='hydrangea-btn-primary px-8 py-4 rounded-2xl font-semibold text-white shadow-lg transition-all duration-300 whitespace-nowrap'
+              className='hydrangea-btn-primary px-8 py-3 rounded-2xl font-semibold text-white shadow-lg transition-all duration-300 whitespace-nowrap'
             >
               Subscribe Now
             </button>
           </form>
 
-          <p className='text-sm text-slate-500 mt-6'>
+          <p className='text-sm text-slate-500 mt-4'>
             ✨ Join 10,000+ readers • 📧 Weekly updates • 🔒 No spam, unsubscribe anytime
           </p>
         </div>
