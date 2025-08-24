@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+/* Hydrangea Theme Color Palette */
+:root {
+  /* Primary Hydrangea Colors */
+  --hydrangea-blue-50: #f0f9ff;
+  --hydrangea-blue-100: #e0f2fe;
+  --hydrangea-blue-200: #bae6fd;
+  --hydrangea-blue-300: #7dd3fc;
+  --hydrangea-blue-400: #38bdf8;
+  --hydrangea-blue-500: #0ea5e9;
+  --hydrangea-blue-600: #0284c7;
+  --hydrangea-blue-700: #0369a1;
+  --hydrangea-blue-800: #075985;
+  --hydrangea-blue-900: #0c4a6e;
+
+  /* Hydrangea Purple Accent */
+  --hydrangea-purple-50: #faf5ff;
+  --hydrangea-purple-100: #f3e8ff;
+  --hydrangea-purple-200: #e9d5ff;
+  --hydrangea-purple-300: #d8b4fe;
+  --hydrangea-purple-400: #c084fc;
+  --hydrangea-purple-500: #a855f7;
+  --hydrangea-purple-600: #9333ea;
+  --hydrangea-purple-700: #7c3aed;
+  --hydrangea-purple-800: #6b21a8;
+  --hydrangea-purple-900: #581c87;
+
+  /* Hydrangea Pink Accent */
+  --hydrangea-pink-50: #fdf2f8;
+  --hydrangea-pink-100: #fce7f3;
+  --hydrangea-pink-200: #fbcfe8;
+  --hydrangea-pink-300: #f9a8d4;
+  --hydrangea-pink-400: #f472b6;
+  --hydrangea-pink-500: #ec4899;
+  --hydrangea-pink-600: #db2777;
+  --hydrangea-pink-700: #be185d;
+  --hydrangea-pink-800: #9d174d;
+  --hydrangea-pink-900: #831843;
+
+  /* Neutral tones inspired by hydrangea leaves and stems */
+  --hydrangea-sage-50: #f8fafc;
+  --hydrangea-sage-100: #f1f5f9;
+  --hydrangea-sage-200: #e2e8f0;
+  --hydrangea-sage-300: #cbd5e1;
+  --hydrangea-sage-400: #94a3b8;
+  --hydrangea-sage-500: #64748b;
+  --hydrangea-sage-600: #475569;
+  --hydrangea-sage-700: #334155;
+  --hydrangea-sage-800: #1e293b;
+  --hydrangea-sage-900: #0f172a;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom scrollbar with hydrangea theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hydrangea-blue-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--hydrangea-blue-400), var(--hydrangea-purple-400));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--hydrangea-blue-500), var(--hydrangea-purple-500));
+}
+
+@theme {
+  --color-primary: var(--hydrangea-blue-600);
+  --color-secondary: var(--hydrangea-purple-500);
+  --color-accent: var(--hydrangea-pink-500);
+}
+
+/* Hydrangea-themed background patterns */
+.hydrangea-bg-pattern {
+  background: linear-gradient(135deg, var(--hydrangea-blue-50) 0%, var(--hydrangea-purple-50) 50%, var(--hydrangea-pink-50) 100%);
+  position: relative;
+}
+
+.hydrangea-bg-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--hydrangea-blue-100) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--hydrangea-purple-100) 0%, transparent 50%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Enhanced glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Hydrangea gradient buttons */
+.hydrangea-btn-primary {
+  background: linear-gradient(135deg, var(--hydrangea-blue-500) 0%, var(--hydrangea-purple-500) 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(14, 165, 233, 0.3);
+}
+
+.hydrangea-btn-primary:hover {
+  background: linear-gradient(135deg, var(--hydrangea-blue-600) 0%, var(--hydrangea-purple-600) 100%);
+  box-shadow: 0 6px 20px 0 rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+.hydrangea-btn-secondary {
+  background: linear-gradient(135deg, var(--hydrangea-pink-400) 0%, var(--hydrangea-purple-400) 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(236, 72, 153, 0.3);
+}
+
+.hydrangea-btn-secondary:hover {
+  background: linear-gradient(135deg, var(--hydrangea-pink-500) 0%, var(--hydrangea-purple-500) 100%);
+  box-shadow: 0 6px 20px 0 rgba(236, 72, 153, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Typography with Playfair Display for headings */
+.title-font {
+  font-family: "Playfair Display", serif;
+}
+
+/* Rich text styles with hydrangea theme */
+.rich-text { 
+  font-size: 16px; 
+  line-height: 1.7;
+  color: var(--hydrangea-sage-700);
+}
+
+.rich-text p { 
+  margin-bottom: 18px; 
+  color: var(--hydrangea-sage-600); 
+}
+
+.rich-text h1 { 
+  font-family: "Playfair Display", serif;
+  font-size: 42px; 
+  font-weight: 700; 
+  color: var(--hydrangea-blue-800) !important; 
+  margin: 36px 0 24px 0;
+  background: linear-gradient(135deg, var(--hydrangea-blue-700), var(--hydrangea-purple-600));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rich-text h2 { 
+  font-family: "Playfair Display", serif;
+  font-size: 28px; 
+  font-weight: 600; 
+  color: var(--hydrangea-purple-700) !important; 
+  margin: 28px 0 20px 0; 
+}
+
+.rich-text h3 { 
+  font-size: 22px; 
+  font-weight: 600; 
+  color: var(--hydrangea-blue-600) !important; 
+  margin: 24px 0 16px 0; 
+}
+
+.rich-text h4 { 
+  font-size: 18px; 
+  font-weight: 500; 
+  color: var(--hydrangea-purple-600) !important; 
+  margin: 20px 0 12px 0; 
+}
+
+.rich-text h5 { 
+  font-size: 16px; 
+  font-weight: 500; 
+  color: var(--hydrangea-sage-700) !important; 
+  margin: 16px 0 10px 0; 
+}
+
+.rich-text h6 { 
+  font-size: 14px; 
+  font-weight: 500; 
+  color: var(--hydrangea-sage-600) !important; 
+  margin: 12px 0 8px 0; 
+}
+
+.rich-text strong { 
+  font-weight: 600; 
+  color: var(--hydrangea-blue-700);
+}
+
+.rich-text ol { 
+  margin-left: 32px; 
+  list-style-type: decimal; 
+  color: var(--hydrangea-sage-600);
+}
+
+.rich-text ul { 
+  margin-left: 32px; 
+  list-style-type: disc; 
+  color: var(--hydrangea-sage-600);
+}
+
+.rich-text li { 
+  margin-bottom: 10px; 
+  line-height: 1.6;
+}
+
+.rich-text a { 
+  color: var(--hydrangea-blue-600);
+  text-decoration: underline;
+  text-decoration-color: var(--hydrangea-blue-300);
+  transition: all 0.2s ease;
+}
+
+.rich-text a:hover {
+  color: var(--hydrangea-purple-600);
+  text-decoration-color: var(--hydrangea-purple-400);
+}
+
+/* Custom animations */
+@keyframes hydrangea-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hydrangea-float {
+  animation: hydrangea-float 3s ease-in-out infinite;
+}
+
+@keyframes hydrangea-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.hydrangea-pulse {
+  animation: hydrangea-pulse 2s ease-in-out infinite;
+}
+
+/* Card hover effects */
+.hydrangea-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 165, 233, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hydrangea-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Animation delays for loading spinners */
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
