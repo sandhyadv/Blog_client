@@ -13,7 +13,30 @@ const Footer = () => {
         <div className='relative z-10'>
           <div className='flex flex-col md:flex-row items-start justify-between py-16 gap-12 border-b border-gradient-to-r from-blue-200 to-purple-200'>
               <div className='md:w-1/2'>
-                  <img src={assets.logo} alt="logo" className='w-36 sm:w-48 mb-6' />
+                  <div className='mb-6 group cursor-pointer w-fit'>
+                    <div className='flex items-center gap-3'>
+                      {/* Custom Unique Logo Icon - Larger for Footer */}
+                      <div className='relative'>
+                        <div className='w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden'>
+                          {/* Letter Q with modern design */}
+                          <div className='text-white font-bold text-xl relative z-10'>Q</div>
+                          {/* Decorative elements */}
+                          <div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent'></div>
+                          <div className='absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full'></div>
+                        </div>
+                        {/* Floating indicator dot */}
+                        <div className='absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full animate-pulse'></div>
+                      </div>
+                      
+                      {/* QuickBlog Text - Larger for Footer */}
+                      <div className='flex flex-col'>
+                        <h2 className='title-font text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-pink-700 transition-all duration-300'>
+                          QuickBlog
+                        </h2>
+                        <div className='w-full h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300'></div>
+                      </div>
+                    </div>
+                  </div>
                   <p className='max-w-md text-slate-600 leading-relaxed text-base'>
                     Empowering creators to share their stories and connect with audiences worldwide. Join our community of passionate writers and readers building the future of digital storytelling.
                   </p>
