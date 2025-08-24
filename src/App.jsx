@@ -19,11 +19,9 @@ const App = () => {
     <div>
       <Toaster/>
       <Routes>
-        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
         
-        {/* Admin Routes */}
         <Route path="/admin" element={token ? <Layout /> : <AdminLogin/>}>
           <Route index element={<Dashboard />} />
           <Route path="addBlog" element={<AddBlog />} />   

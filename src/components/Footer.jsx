@@ -4,7 +4,6 @@ import { assets, footer_data } from '../assets/assets'
 const Footer = () => {
   return (
     <div className='px-6 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 relative overflow-hidden'>
-        {/* Background decorative elements */}
         <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>
           <div className='absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-2xl'></div>
           <div className='absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl'></div>
@@ -15,23 +14,18 @@ const Footer = () => {
               <div className='md:w-1/2'>
                   <div className='mb-6 group cursor-pointer w-fit'>
                     <div className='flex items-center gap-3'>
-                      {/* Custom Unique Logo Icon - Larger for Footer */}
                       <div className='relative'>
                         <div className='w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden'>
-                          {/* Letter Q with modern design */}
-                          <div className='text-white font-bold text-xl relative z-10'>Q</div>
-                          {/* Decorative elements */}
+                          <div className='text-white font-bold text-xl relative z-10'>B</div>
                           <div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent'></div>
                           <div className='absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full'></div>
                         </div>
-                        {/* Floating indicator dot */}
                         <div className='absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full animate-pulse'></div>
                       </div>
                       
-                      {/* QuickBlog Text - Larger for Footer */}
                       <div className='flex flex-col'>
                         <h2 className='title-font text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-pink-700 transition-all duration-300'>
-                          QuickBlog
+                          Blogify
                         </h2>
                         <div className='w-full h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300'></div>
                       </div>
@@ -78,7 +72,7 @@ const Footer = () => {
 
           <div className='py-8 text-center'>
             <p className='text-slate-500 text-sm'>
-              © 2025 QuickBlog. Crafted with ❤️ for creators everywhere.
+              © 2025 Blogify. Crafted with ❤️ for creators everywhere.
             </p>
             <div className='flex justify-center gap-6 mt-4 text-xs text-slate-400'>
               <a href='#' className='hover:text-blue-600 transition-colors duration-200'>Privacy Policy</a>

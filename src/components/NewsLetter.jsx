@@ -4,7 +4,6 @@ const NewsLetter = () => {
   return (
     <div className='mx-8 sm:mx-16 xl:mx-24 my-24'>
       <div className='hydrangea-bg-pattern rounded-3xl p-8 text-center relative overflow-hidden'>
-        {/* Background decorative elements */}
         <div className='absolute top-0 left-0 w-full h-full'>
           <div className='absolute top-8 left-8 w-20 h-20 bg-gradient-to-br from-white/40 to-blue-200/40 rounded-full blur-xl'></div>
           <div className='absolute bottom-8 right-8 w-32 h-32 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-full blur-2xl'></div>
@@ -12,7 +11,6 @@ const NewsLetter = () => {
         </div>
 
         <div className='relative z-10 max-w-3xl mx-auto'>
-          {/* Newsletter Icon */}
           <div className='w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl flex items-center justify-center transform rotate-12 hydrangea-float'>
             <svg className='w-8 h-8 text-white transform -rotate-12' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
