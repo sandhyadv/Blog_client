@@ -72,10 +72,10 @@ const BlogTableItem = ({ blog, fetchBlogs, index }) => {
           </button>
           <button
             onClick={deleteBlog}
-            className='p-1.5 rounded-lg bg-red-100 text-red-600 hover:bg-red-200 transition-all duration-200'
-            title="Delete"
+            className='p-1.5 rounded-lg bg-red-100 text-red-600 hover:bg-red-200 hover:scale-105 transition-all duration-200 group'
+            title="Delete Blog"
           >
-            <img src={assets.cross_icon} className='w-3 h-3' alt="Delete" />
+            <img src={assets.delete_icon} className='w-3.5 h-3.5 group-hover:brightness-110' alt="Delete" />
           </button>
         </div>
       </td>
