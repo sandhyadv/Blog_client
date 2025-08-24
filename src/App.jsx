@@ -8,9 +8,6 @@ import AddBlog from './admin/AddBlog'
 import ListBlog from './admin/ListBlog'
 import Comments from './admin/Comments'
 import AdminLogin from './components/admin/Login'
-import Login from './components/auth/Login'
-import Signup from './components/auth/Signup'
-import ProtectedRoute from './components/auth/ProtectedRoute'
 import 'quill/dist/quill.snow.css'
 import {Toaster} from 'react-hot-toast'
 import { useAppContext } from './context/AppContext'
@@ -25,30 +22,13 @@ const App = () => {
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
         
+        {/* Admin Routes */}
         <Route path="/admin" element={token ? <Layout /> : <AdminLogin/>}>
-          <Route index element={
-            <ProtectedRoute requireAdmin={true}>
-              <Dashboard />
-            </ProtectedRoute>
-          } />
-          <Route path="addBlog" element={
-            <ProtectedRoute requireAdmin={true}>
-              <AddBlog />
-            </ProtectedRoute>
-          } />   
-          <Route path="listBlog" element={
-            <ProtectedRoute requireAdmin={true}>
-              <ListBlog />
-            </ProtectedRoute>
-          } />
-          <Route path="comments" element={
-            <ProtectedRoute requireAdmin={true}>
-              <Comments />
-            </ProtectedRoute>
-          } />
+          <Route index element={<Dashboard />} />
+          <Route path="addBlog" element={<AddBlog />} />   
+          <Route path="listBlog" element={<ListBlog />} />
+          <Route path="comments" element={<Comments />} />
         </Route>
         
         <Route path="*" element={

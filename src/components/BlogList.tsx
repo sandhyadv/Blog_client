@@ -62,8 +62,9 @@ const BlogList = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        {filteredBlogs().filter((blog) => menu === "All" ? true : blog.category === menu).
-          map((blog, index) => (
+        {filteredBlogs()
+          .filter((blog) => menu === "All" ? true : blog.category === menu)
+          .map((blog, index) => (
             <motion.div
               key={blog._id}
               initial={{ opacity: 0, y: 20 }}
